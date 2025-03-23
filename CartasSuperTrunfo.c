@@ -9,6 +9,8 @@ int main() {
     float area1;                    // Armazena a área da cidade da Carta 1 (em km²)
     float pib1;                     // Armazena o PIB da cidade da Carta 1 (em bilhões de reais)
     int pontosTuristicos1;          // Armazena o número de pontos turísticos da cidade da Carta 1
+    float densidadePop1;
+    float pibPerCapita1;
 
     // Declaração das Variáveis para armazenar os dados da Carta 2
 
@@ -38,6 +40,11 @@ int main() {
     printf("Digite o número de pontos turísticos da cidade da primeira Carta: ");
     scanf("%d", &pontosTuristicos1);// Lê o número de pontos turísticos da cidade da carta 1
 
+    // Cálculo da densidade populacional e PIB per capita para Carta 1
+    densidadePop1 = populacao1 / area1; // Densidade populacional = População / Área
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1; // PIB per capita = PIB / População (PIB está em bilhões, então multiplicamos por 1 bilhão)
+
+
     // Comentado: Leitura dos dados da Carta 2 (não usado no momento)
     printf("\n ENTRADA DE DADOS DA CARTA 02: \n\n");
     printf("Digite o estado da segunda Carta (letra de A a H): ");
@@ -65,6 +72,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);                 // Exibe a área da cidade da carta 1
     printf("PIB: %.2f bilhões de reais\n", pib1);      // Exibe o PIB da cidade da carta 1
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);  // Exibe o número de pontos turísticos da cidade da carta 1
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePop1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     // Comentado: Exibição dos dados da Carta 2 (não usado no momento)
     
